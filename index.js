@@ -10,18 +10,20 @@ app.get("/send", function(req, res){
             "webhookurl": req.query.webhookurl,
             "webhookavatar": req.query.webhookavatar,
             "webhookusername": req.query.webhookusername,
-            "content": req.query.content
+            "content": req.query.content,
+            "attachment": req.query.attachment
         }
     });
 
-    if (req.query.webhookavatar == "" && req.query.webhookusername == ""){
-        const hook = new Webhook(req.query.webhookurl);
-        hook.send(req.query.content);
+    const hook = new Webhook(req.query.webhookurl);
+    hook.setAvatar(req.query.webhookavatar);
+    hook.setUsername(req.query.webhookusername);
+    hook.send(req.query.content);
+
+    if (req.query.attachment == "") {
+
     } else {
-        const hook = new Webhook(req.query.webhookurl);
-        hook.setAvatar(req.query.webhookavatar);
-        hook.setUsername(req.query.webhookusername);
-        hook.send(req.query.content);
+        hook.sendFile(req.query.attachment);
     }
 });
 

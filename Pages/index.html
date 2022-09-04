@@ -7,27 +7,41 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
-<body>
+<body id="body">
     <center>
         <h3>Discord Webhook Messenger</h3>
         <div>
-            <font>Webhook URL: </font>
-            <input type="text" id="webhookurlBox" style="width: 660px; margin-top: 10px;" placeholder="https://discord.com/api/webhooks/" required>
+            <font style="font-weight: 600;">Webhook URL: </font>
+            <input type="text" id="webhookurlBox" style="width: 660px; margin-top: 10px;" placeholder="https://discord.com/api/webhooks/">
         </div>
         <div style="margin-top: 20px;">
-            <font>Webhook Avatar URL: </font>
+            <font style="font-weight: 600;">Webhook Avatar URL: </font>
             <input type="text" id="webhookavatarBox" style="width: 660px; margin-top: 10px;" placeholder="https://i.imgur.com/SYx04qd.png">
         </div>
         <div style="margin-top: 20px;">
-            <font>Webhook Username: </font>
+            <font style="font-weight: 600;">Webhook Username: </font>
             <input type="text" id="webhookusernameBox" style="width: 660px; margin-top: 10px;" placeholder="Spidey Bot">
         </div>
         <div style="margin-top: 20px;">
-            <font>Message Content: </font>
+            <font style="font-weight: 600;">Message Content: </font>
             <div style="margin-top: 10px;">
-                <textarea id="webhookcontentBox" style="height: 200px; width: 800px;" placeholder="Hello world!" required></textarea>
+                <textarea id="webhookcontentBox" style="height: 200px; width: 800px;" placeholder="Hello world!"></textarea>
             </div>
         </div>
+        <hr  style="margin-top: 20px; margin-bottom: 20px;">
+        <div>
+            <input type="file" id="webhookAttachmentBox" disabled>
+            <button style="margin-top: 10px;" id="removeSelectedFileButton" disabled>Remove Selected File</button>
+        </div>
+        <div style="margin-top: 20px;">
+            <font style="font-weight: 600;">File Path</font>
+            <input type="text" id="webhookAttachmentPathBox" style="width: 660px; margin-top: 10px;" placeholder="C:\Users\Owner\Downloads\Example.png">
+        </div>
+        <div style="margin-top: 20px;">
+            <input type="checkbox" id="fileDialogBox">
+            <font>File Dialog</font>
+        </div>
+        <hr style="margin-top: 20px; margin-bottom: 20px;">
         <div style="margin-top: 20px;">
             <button id="sendButton" disabled="true">Send Webhook</button>
         </div>
