@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Discord Webhook Messenger</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <center>
+        <h3>Discord Webhook Messenger</h3>
+        <div>
+            <font>Webhook URL: </font>
+            <input type="text" id="webhookurlBox" style="width: 660px; margin-top: 10px;" placeholder="https://discord.com/api/webhooks/" required>
+        </div>
+        <div style="margin-top: 20px;">
+            <font>Webhook Avatar URL: </font>
+            <input type="text" id="webhookavatarBox" style="width: 660px; margin-top: 10px;" placeholder="https://i.imgur.com/SYx04qd.png">
+        </div>
+        <div style="margin-top: 20px;">
+            <font>Webhook Username: </font>
+            <input type="text" id="webhookusernameBox" style="width: 660px; margin-top: 10px;" placeholder="Spidey Bot">
+        </div>
+        <div style="margin-top: 20px;">
+            <font>Message Content: </font>
+            <div style="margin-top: 10px;">
+                <textarea id="webhookcontentBox" style="height: 200px; width: 800px;" placeholder="Hello world!" required></textarea>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <button id="sendButton" disabled="true">Send Webhook</button>
+        </div>
+    </center>
+    <script src='main.js'></script>
+</body>
+</html>
