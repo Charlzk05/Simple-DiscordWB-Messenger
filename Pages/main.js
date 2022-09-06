@@ -14,6 +14,8 @@ const sendButton = document.getElementById("sendButton");
 webhookurlBox.addEventListener("input", function(e) {
     if (e.target.value.includes("https://discord.com/api/webhooks/")) {
         sendButton.disabled = false;
+    } else if (e.target.value.includes("https://discordapp.com/api/webhooks/")) {
+        sendButton.disabled = false;
     } else { 
         sendButton.disabled = true;
     }

@@ -19,7 +19,7 @@ app.get("/send", function(req, res){
     hook.setAvatar(req.query.webhookavatar);
     hook.setUsername(req.query.webhookusername);
     hook.send(req.query.content);
-
+    
     if (req.query.attachment == "") {
 
     } else {
