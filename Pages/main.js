@@ -27,7 +27,7 @@ webhookAttachmentBox.addEventListener("input", function(e) {
     } else {
         webhookAttachmentPathBox.disabled = true;
     }
-});
+}); 
 
 fileDialogBox.addEventListener("click", function() {
     if (fileDialogBox.checked == true) {
